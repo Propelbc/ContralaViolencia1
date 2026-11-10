@@ -1,0 +1,41 @@
+/* Ajustes para teléfonos y pantallas táctiles. Se carga al final para sobrescribir. */
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
+img{max-width:100%}
+.carousel .track{touch-action:pan-y}
+
+/* Rejillas: nunca más anchas que la pantalla */
+.grid{grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr))}
+.cols{grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr))}
+.orgs{grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr))}
+.phones{grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr))}
+
+/* Puntos del carrusel con área táctil de 24px */
+.dots{gap:0}
+.dots button{width:24px;height:24px;border:0;background:none;position:relative;cursor:pointer}
+.dots button::after{content:"";position:absolute;inset:5px;border:2px solid var(--ink);border-radius:50%}
+.dots button[aria-current="true"]{background:none}
+.dots button[aria-current="true"]::after{background:var(--ink)}
+
+/* El botón SOS no debe tapar el pie de página */
+footer{padding-bottom:calc(88px + env(safe-area-inset-bottom,0px))}
+
+@media (max-width:640px){
+  body{font-size:1.05rem}
+  header{padding:10px 14px}
+  .logos{gap:6px;padding:4px 8px}
+  .logos img{height:30px}
+  .logos img.sq{height:34px}
+  section{padding-top:56px}
+  .slide{min-height:300px}
+  .slide a.btn{padding:14px 24px}
+  .band .in{padding:20px;gap:18px}
+  .band img{height:64px}
+  .play{padding:18px}
+  .play button{width:100%;margin:6px 0}
+  .sos{padding:12px 16px;font-size:.95rem}
+}
+@media (max-width:360px){
+  .logos img{height:26px}
+  .logos img.sq{height:30px}
+  .burger{width:42px;height:42px}
+}

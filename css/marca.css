@@ -1,0 +1,8 @@
+.logos{display:flex;align-items:center;gap:10px;background:#fff;border-radius:12px;padding:5px 10px}
+.logos img{height:38px;width:auto;display:block}
+.logos img.sq{height:44px}
+.band{max-width:1100px;margin:80px auto 0;padding:0 20px}
+.band .in{background:#fff;color:#1E1B2E;border-radius:20px;padding:28px;display:flex;flex-wrap:wrap;gap:28px;align-items:center;justify-content:center}
+.band img{height:96px;width:auto}
+.band p{margin:0;flex:1 1 260px;max-width:46ch;font:500 1rem/1.5 "Bricolage Grotesque",sans-serif}
+@media (max-width:640px){.brand{display:none}}

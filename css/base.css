@@ -1,0 +1,11 @@
+:root{--bg:#F6F4FA;--surface:#FFFFFF;--ink:#1E1B2E;--muted:#5A5670;--violet:#5B3FD1;--lilac:#E9E4F8;--amber:#F2B84B;--on-violet:#FFFFFF;--line:#D9D3EC;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#15131F;--surface:#1F1C2E;--ink:#EFEBFA;--muted:#B2ACC9;--violet:#9C86F5;--lilac:#2A2540;--line:#38334F;--on-violet:#15131F}}
+:root[data-theme="dark"]{--bg:#15131F;--surface:#1F1C2E;--ink:#EFEBFA;--muted:#B2ACC9;--violet:#9C86F5;--lilac:#2A2540;--line:#38334F;--on-violet:#15131F}
+html{scroll-behavior:smooth;scroll-padding-top:calc(72px + env(safe-area-inset-top,0px))}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1.125rem/1.65 "Source Serif 4",Georgia,serif}
+h1,h2,h3,.ui{font-family:"Bricolage Grotesque","Helvetica Neue",Arial,sans-serif}
+a{color:var(--violet)}
+:focus-visible{outline:3px solid var(--amber);outline-offset:3px}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:20}
